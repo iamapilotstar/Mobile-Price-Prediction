@@ -9,71 +9,46 @@ Note: This project is strictly for educational and portfolio purposes. It does n
 
 🧾 Dataset Description
 Source: Compiled from public smartphone specifications (e-commerce and spec websites).
-
 Samples: 1,370 smartphones
-
 Target Variable: 📉 Launch Price (in INR)
 Features Include:
 
 🔢 Features Include:
 📶 RAM, Internal/External Memory, Battery (mAh), Fast Charging (W)
-
 📱 Display Size, Screen Width/Height, Notch Type
-
 📸 Camera Specs – Rear MP, Front MP, Rear Camera Count
-
 📡 Network Capabilities – 3G, 4G, 5G, SIM Type
-
 🤖 Android Version, 📦 Brand, ⚙️ Processor Name & Tier
 
 
 🧹 Data Preprocessing & Feature Engineering
-
 🔄 Parsed text fields like "6000 mAh Battery" into numeric columns.
-
 🏷️ Processor Tier Mapping:
-
 Entry, Mid, Upper-Mid, Flagship, Ultra
 
 🧠 Feature Engineering:
-
 SIM capability (3G, 4G, 5G)
-
 Company Encoding
-
 Notch Type from screen resolution patterns
 
 🧼 Missing Value Treatment:
-
 Imputed using median/mode
-
 Removed if non-essential
-
 🔢 Label Encoding for categorical features
-
-
 
 🧠 Modeling Approach
 🧪 Regression Models:
 🥇 XGBoost (Best)
-
 🐈 CatBoost
-
 💡 LightGBM
-
 🌲 Random Forest
-
 📈 Gradient Boosting
-
 ⚠️ AdaBoost
 
 🧮 Evaluation Metrics:
 🔢 MAE (Mean Absolute Error)
-
 📉 RMSE (Root Mean Squared Error)
-
 📊 R² and Adjusted R²
-
 
 🏆 Best Performing Model: XGBoost
 Metric	Value
@@ -85,28 +60,18 @@ Metric	Value
 
 🧠 SHAP & Feature Importance
 🔍 SHAP values were used to explain feature-level impact.
-
 🥇 Top contributors to price prediction:
-
 🖥️ Display Size
-
 🧠 RAM
-
 🔋 Battery
-
 ⚙️ Processor Tier
-
 🏢 Company
-
 📏 Screen Resolution
 
 🚀 Streamlit Deployment
 🌐 Interactive user interface
-
 📱 Input real smartphone specs
-
 💰 Predict launch price and class (Budget / Mid / High-end)
-
 📊 View SHAP & feature influence visuals
 
 ✅ Confidence scores with bar charts
@@ -128,16 +93,11 @@ mobile-price-prediction/
 └── README.md                 # This file
 
 📈 Future Improvements
-
 Add ordinal regression with labels (Budget < Mid < High) for better tier handling.
-
 Introduce manual label corrections (e.g., G85 with HD+ plastic body = Entry).
-
 Use real-world launch price ranges scraped dynamically.
-
 Explore transformers or tabular deep learning models (TabNet, FT-Transformer).
 
 🤝 Acknowledgements
-
 Special thanks to communities like Kaggle, StackOverflow, and HuggingFace for educational resources.
 
