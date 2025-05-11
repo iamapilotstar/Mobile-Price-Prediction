@@ -1,109 +1,115 @@
-Mobile Price Prediction using Machine Learning
+📱 Mobile Price Prediction using Machine Learning
 
-Overview
+🔍 Overview
+This project predicts the launch price of smartphones based solely on their technical specifications using supervised regression models. It also includes a classification sub-model to categorize smartphones into Budget, Mid-range, and High-end tiers. The final product is deployed as a Streamlit web app for public interaction.
 
-This project aims to predict the launch price of smartphones based solely on their technical specifications using supervised regression models. It also includes a classification sub-model to categorize smartphones into Budget, Mid-range, and High-end tiers for comparative analysis. The final output is deployed as a Streamlit app for public interaction.
+⚠️ Note: This project is for educational and portfolio purposes only. It does not account for discounts, depreciation, resale value, or promotional pricing.
 
 Note: This project is strictly for educational and portfolio purposes. It does not account for real-world factors such as discounts, depreciation, resale value, or promotional pricing.
 
-📊 Dataset Description
+🧾 Dataset Description
+Source: Compiled from public smartphone specifications (e-commerce and spec websites).
 
-Source: Scraped and compiled from e-commerce and specification sites.
+Samples: 1,370 smartphones
 
-Total Samples: 1370 smartphones
-
-Target Variable: Price (Launch price in INR)
-
+Target Variable: 📉 Launch Price (in INR)
 Features Include:
 
-RAM, Internal/External Memory, Battery (mAh), Fast Charging (W)
+🔢 Features Include:
+📶 RAM, Internal/External Memory, Battery (mAh), Fast Charging (W)
 
-Display size, Screen resolution, Notch type
+📱 Display Size, Screen Width/Height, Notch Type
 
-Camera specs (Rear and Front MP, Camera Count)
+📸 Camera Specs – Rear MP, Front MP, Rear Camera Count
 
-SIM features (3G/4G/5G support, Dual/Single/No SIM)
+📡 Network Capabilities – 3G, 4G, 5G, SIM Type
 
-Android version, Brand, Processor name & tier
+🤖 Android Version, 📦 Brand, ⚙️ Processor Name & Tier
 
-🔧 Data Preprocessing
 
-Parsing textual specs (e.g., "6000 mAh Battery") into numerical columns.
+🧹 Data Preprocessing & Feature Engineering
 
-Feature engineering:
+🔄 Parsed text fields like "6000 mAh Battery" into numeric columns.
 
-Processor Tier Mapping (Entry, Mid, Upper-Mid, Flagship, Ultra)
+🏷️ Processor Tier Mapping:
 
-Company Brand Encoding
+Entry, Mid, Upper-Mid, Flagship, Ultra
 
-Network capabilities (3G, 4G, 5G) from SIM info
+🧠 Feature Engineering:
 
-Notch type from screen resolution descriptions
+SIM capability (3G, 4G, 5G)
 
-Missing value handling:
+Company Encoding
 
-Imputed using mode, median or removed if non-essential
+Notch Type from screen resolution patterns
 
-Label Encoding for categorical variables like Company, Processor Tier
+🧼 Missing Value Treatment:
 
-📈 Modeling Approach
+Imputed using median/mode
 
-Regression Models Used:
+Removed if non-essential
 
-CatBoost Regressor ✅ (Best performer overall)
+🔢 Label Encoding for categorical features
 
-LightGBM
 
-XGBoost
 
-Random Forest
+🧠 Modeling Approach
+🧪 Regression Models:
+🥇 XGBoost (Best)
 
-Gradient Boosting
+🐈 CatBoost
 
-AdaBoost
+💡 LightGBM
 
-Model Evaluation Metrics:
+🌲 Random Forest
 
-MAE (Mean Absolute Error)
+📈 Gradient Boosting
 
-RMSE (Root Mean Squared Error)
+⚠️ AdaBoost
 
-R² Score and Adjusted R²
+🧮 Evaluation Metrics:
+🔢 MAE (Mean Absolute Error)
 
-🏆 Best Model Performance (XGBoost):
+📉 RMSE (Root Mean Squared Error)
 
-Test MAE: ₹6308
+📊 R² and Adjusted R²
 
-Test RMSE: ₹10608
 
-Test R²: 0.8752
-
-Adjusted R²: 0.8658
-
+🏆 Best Performing Model: XGBoost
+Metric	Value
+🎯 Test MAE	₹6,308
+📉 Test RMSE	₹10,608
+📈 Test R²	0.8752
+✅ Adjusted R²	0.8658
 🔍 SHAP & Feature Importance
 
-SHAP values were used to explain model outputs.
+🧠 SHAP & Feature Importance
+🔍 SHAP values were used to explain feature-level impact.
 
-Key features influencing price:
+🥇 Top contributors to price prediction:
 
-Display size
+🖥️ Display Size
 
-RAM
+🧠 RAM
 
-Screen Resolution
+🔋 Battery
 
-Battery Capacity
+⚙️ Processor Tier
 
-Company & Processor Tier
+🏢 Company
 
-💻 Streamlit Deployment
+📏 Screen Resolution
 
-The entire system is deployed using Streamlit, offering:
+🚀 Streamlit Deployment
+🌐 Interactive user interface
 
-Interactive UI for smartphone specs
+📱 Input real smartphone specs
 
-Real-time price and tier prediction
+💰 Predict launch price and class (Budget / Mid / High-end)
 
+📊 View SHAP & feature influence visuals
+
+✅ Confidence scores with bar charts
 Model confidence and feature breakdowns
 
 📦 Project Structure
@@ -132,8 +138,6 @@ Use real-world launch price ranges scraped dynamically.
 Explore transformers or tabular deep learning models (TabNet, FT-Transformer).
 
 🤝 Acknowledgements
-
-Inspired by real-world mobile shopping use cases.
 
 Special thanks to communities like Kaggle, StackOverflow, and HuggingFace for educational resources.
 
