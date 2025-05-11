@@ -1,4 +1,4 @@
-**📱 Mobile Price Prediction using Machine Learning
+📱 Mobile Price Prediction using Machine Learning
 
 🔍 Overview
 This project predicts the launch price of smartphones based solely on their technical specifications using supervised regression models. It also includes a classification sub-model to categorize smartphones into Budget, Mid-range, and High-end tiers. The final product is deployed as a Streamlit web app for public interaction.
@@ -100,5 +100,3 @@ Explore transformers or tabular deep learning models (TabNet, FT-Transformer).
 
 🤝 Acknowledgements
 Special thanks to communities like Kaggle, StackOverflow, and HuggingFace for educational resources.
-
-**
