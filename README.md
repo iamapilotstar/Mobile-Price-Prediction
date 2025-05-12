@@ -7,6 +7,10 @@ This project predicts the launch price of smartphones based solely on their tech
 
 Note: This project is strictly for educational and portfolio purposes. It does not account for real-world factors such as discounts, depreciation, resale value, or promotional pricing.
 
+
+Live Demo: https://mobileprice.streamlit.app/
+
+
 🧾 Dataset Description
 Source: Compiled from public smartphone specifications (e-commerce and spec websites).
 Samples: 1,370 smartphones
